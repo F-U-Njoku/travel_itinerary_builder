@@ -20,16 +20,20 @@ The ingestion of the data is done through the ``ingestion.ipynb`` notebook. To e
   <img src="./media/tip.webp">
 </p>
 The image above summarizes the RAG flow. Data is obtained using Google Places API and web scrapping and then ingested into two knowledge-based systems: Elastic search and FAISS (Facebook AI Similarity Search). In all, there are three possibilities considered for retrieving data from the knowledge base:
+
 - Keyword Search with Elastic
 - Semantic Search with Elastic (Cosine Similarity)
 - Semantic Search with FAISS (L2 Distance)
 
- These three retrieval approaches were evaluated using Hit-rate. Although the first two have the same scores, keyword search with Elastic was chosen since it has a lower computational requirement (no need for encoding). Details of the retrieval evaluation are in the ``retrieval.ipynb`` notebook.
+Finally, the generation is done with openAI chatGPT 4o-mini implemented in the ``rag.py`` script.
+
+# Evaluation
+ The three retrieval approaches were evaluated using Hit-rate. Although the first two have the same scores, keyword search with Elastic was chosen since it has a lower computational requirement (no need for encoding). Details of the retrieval evaluation are in the ``retrieval.ipynb`` notebook.
  <p align="center">
   <img src="./media/hitrate.png">
 </p>
 
- Finally, the generation is done with openAI chatGPT 4o-mini implemented in the ``rag.py`` script. Using LLM as a judge to evaluate the RAG on 140 prompts, it got an average score of 8.58 out of 10.
+Using LLM as a judge, the RAG was evaluated on 140 prompts; it got an average score of 8.58 out of 10.
  <p align="center">
   <img src="./media/rag_score.png">
 </p>
@@ -43,3 +47,9 @@ The main application can be found in the ``tip_app.py`` file. The user interface
 Feedback is collected from each user via a thumbs-up and down button. This is stored and monitored in a Plotly dashboard displayed using Streamlit, and below is a video demonstrating this.
 
 [![IMonitoring](https://img.youtube.com/vi/SWm8kX58fZg/0.jpg)](https://youtu.be/SWm8kX58fZg)
+
+# Remarks
+This project can be extended to more cities and will be my next step. Also, trying other LLMs besides ChatGPT will be an exciting experiment.
+
+# Acknowledgement
+I thank the Datatalks club for putting such a practical course together for free and giving me the first dive into Large Language Models. Thanks to Alexey and the entire team.
