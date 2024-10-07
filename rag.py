@@ -1,7 +1,6 @@
 import os
 from openai import OpenAI
-OPENAI_API_KEY = "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"
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI()
 
 
 def build_prompt(params):
