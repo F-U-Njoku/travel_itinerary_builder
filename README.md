@@ -25,8 +25,14 @@ The image above summarizes the RAG flow. Data is obtained using Google Places AP
 - Semantic Search with FAISS (L2 Distance)
 
  These three retrieval approaches were evaluated using Hit-rate. Although the first two have the same scores, keyword search with Elastic was chosen since it has a lower computational requirement (no need for encoding). Details of the retrieval evaluation are in the ``retrieval.ipynb`` notebook.
+ <p align="center">
+  <img src="./media/hitrate.png">
+</p>
 
  Finally, the generation is done with openAI chatGPT 4o-mini implemented in the ``rag.py`` script. Using LLM as a judge to evaluate the RAG on 140 prompts, it got an average score of 8.58 out of 10.
+ <p align="center">
+  <img src="./media/rag_score.png">
+</p>
 
 # Demo
 The main application can be found in the ``tip_app.py`` file. The user interface is done using Streamlit, and here is a short demo.
