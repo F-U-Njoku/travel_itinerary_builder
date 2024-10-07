@@ -1,0 +1,9 @@
+timestamp,type,duration,month,activities
+2024-10-05 23:46:51,positive,one,January,adventure
+2024-10-05 23:48:37,positive,one,January,relaxation
+2024-10-05 23:49:32,positive,three,November,"adventure, culture"
+2024-10-05 23:50:56,negative,one,April,relaxation
+2024-10-07 00:09:54,positive,one,January,sightseeing
+2024-10-07 23:51:03,positive,five,December,relaxation
+2024-10-07 23:58:44,positive,one,October,
+2024-10-08 00:04:54,positive,two,October,"sightseeing, adventure"
