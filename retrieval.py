@@ -1,10 +1,15 @@
+import streamlit as st
 from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformer
 
 
 # Load the sentence transformer model
 model = SentenceTransformer('all-mpnet-base-v2')
-es_client = Elasticsearch("http://localhost:9200")
+elastic_api_key = st.secrets["elastic_api_key"]
+es_client = Elasticsearch(
+    cloud_id='tip_deployment:ZXVyb3BlLXdlc3QxLmdjcC5jbG91ZC5lcy5pbzo0NDMkMDk4MWE3OTlhNTg1NGE2MWE5NTFmM2FhMzUxNTJlNTQkZWVlODQyNmE3NDdkNGZiYTkyYTI3M2MyNDg2M2E4Yzc=',
+    api_key=elastic_api_key
+)
 
 def elastic_search(query):
     query_body = {
