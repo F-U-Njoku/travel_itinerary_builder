@@ -11,6 +11,7 @@ pandas = "*"
 flask = "*"
 streamlit = "*"
 numpy = "*"
+plotly = "*"
 
 [dev-packages]
 notebook = "*"
