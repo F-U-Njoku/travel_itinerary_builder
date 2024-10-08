@@ -13,6 +13,7 @@ from rag import gpt, build_prompt
 from retrieval import elastic_search
 
 
+os.environ['elastic_api_key'] = st.secrets['elastic_api_key']
 es_client = Elasticsearch(
     ['https://0981a799a5854a61a951f3aa35152e54.europe-west1.gcp.cloud.es.io:443'],
     api_key=(elastic_api_key)
