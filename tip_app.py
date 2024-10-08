@@ -13,7 +13,10 @@ from rag import gpt, build_prompt
 from retrieval import elastic_search
 
 
-es_client = Elasticsearch("http://localhost:9200")
+es_client = Elasticsearch(
+    ['https://0981a799a5854a61a951f3aa35152e54.europe-west1.gcp.cloud.es.io:443'],
+    api_key=(elastic_api_key)
+)
 activities_df = pd.read_csv("./data/activities.csv")
 client = OpenAI()
 FEEDBACK_FILE = "./data/feedback_data.csv"
