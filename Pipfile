@@ -12,6 +12,7 @@ flask = "*"
 streamlit = "*"
 numpy = "*"
 plotly = "*"
+sentence-transformers = "*"
 
 [dev-packages]
 notebook = "*"
