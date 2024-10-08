@@ -16,7 +16,10 @@ from retrieval import elastic_search
 elastic_api_key = st.secrets["elastic_api_key"]
 es_client = Elasticsearch(
     cloud_id='tip_deployment:ZXVyb3BlLXdlc3QxLmdjcC5jbG91ZC5lcy5pbzo0NDMkMDk4MWE3OTlhNTg1NGE2MWE5NTFmM2FhMzUxNTJlNTQkZWVlODQyNmE3NDdkNGZiYTkyYTI3M2MyNDg2M2E4Yzc=',
-    api_key=(elastic_api_key)
+    api_key=elastic_api_key,
+    use_ssl=True,  # Ensure SSL is enabled
+    verify_certs=True,  # Verify the SSL certificate
+    scheme="https"  # Ensure HTTPS is used instead of HTTP
 )
 activities_df = pd.read_csv("./data/activities.csv")
 client = OpenAI()
