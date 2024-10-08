@@ -43,6 +43,9 @@ The main application can be found in the ``tip_app.py`` file. The user interface
 
 [![Barcelona Travel Itinerary Planner](https://img.youtube.com/vi/ZtX04XflwiA/0.jpg)](https://youtu.be/ZtX04XflwiA)
 
+# Deployement
+The application is deployed and available on Streamlit Streamlit Community Cloud, [click here](https://f-u-njoku-travel-itinerary-builder-tip-app-fagzoi.streamlit.app/)
+
 # Monitoring
 Feedback is collected from each user via a thumbs-up and down button. This is stored and monitored in a Plotly dashboard displayed using Streamlit, and below is a video demonstrating this.
 
