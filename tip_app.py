@@ -15,7 +15,7 @@ from retrieval import elastic_search
 
 elastic_api_key = st.secrets["elastic_api_key"]
 es_client = Elasticsearch(
-    cloud_id='3a51a8b57e364b4d8e0144c18692fac5:ZXVyb3BlLXdlc3QxLmdjcC5jbG91ZC5lcy5pbzo0NDMkMDk4MWE3OTlhNTg1NGE2MWE5NTFmM2FhMzUxNTJlNTQkZWVlODQyNmE3NDdkNGZiYTkyYTI3M2MyNDg2M2E4Yzc=',
+    cloud_id='tip_deployment:ZXVyb3BlLXdlc3QxLmdjcC5jbG91ZC5lcy5pbzo0NDMkMDk4MWE3OTlhNTg1NGE2MWE5NTFmM2FhMzUxNTJlNTQkZWVlODQyNmE3NDdkNGZiYTkyYTI3M2MyNDg2M2E4Yzc=',
     api_key=(elastic_api_key)
 )
 activities_df = pd.read_csv("./data/activities.csv")
